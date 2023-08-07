@@ -37,3 +37,44 @@ decode_huff has the following parameters:
 
 root: a reference to the root node of the Huffman tree
 s: a Huffman encoded string
+
+<h2>Input Format</h2>
+
+There is one line of input containing the plain string, s . Background code creates the Huffman tree then passes the head node and the encoded string to the function.
+
+<h2>Constraints</h2>
+1 ≤ |s| ≤ 25
+
+<h2>Output Format</h2>
+
+Output the decoded string on a single line.
+
+<h2>Sample Input</h2>
+![image](https://github.com/sroycho4/Huffman_Decoding/assets/135149476/1ebb9b12-7800-4e5b-b414-9f7a4997bbb8)
+
+s="1001011"
+
+<h2>Sample Output</h2>
+ABACA
+
+<h2>Explanationt</h2>
+S="1001011"
+Processing the string from left to right.
+S[0]='1' : we move to the right child of the root. We encounter a leaf node with value 'A'. We add 'A' to the decoded string.
+We move back to the root.
+
+S[1]='0' : we move to the left child. 
+S[2]='0' : we move to the left child. We encounter a leaf node with value 'B'. We add 'B' to the decoded string.
+We move back to the root.
+
+S[3] = '1' : we move to the right child of the root. We encounter a leaf node with value 'A'. We add 'A' to the decoded string.
+We move back to the root.
+
+S[4]='0' : we move to the left child. 
+S[5]='1' : we move to the right child. We encounter a leaf node with value C'. We add 'C' to the decoded string.
+We move back to the root.
+
+ S[6] = '1' : we move to the right child of the root. We encounter a leaf node with value 'A'. We add 'A' to the decoded string.
+We move back to the root.
+
+Decoded String = "ABACA"
